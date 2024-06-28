@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: red;
+}
+
+.contant {
+  margin: 20px;
+  background-color: var(--main-color);
+}
+
+.header {
+  background-color: green;
+}
+
+.footer {
+  background-color: yellow;
+}
+
+.under {
+  color: red;
+}
+
+.father {
+  color: red;
+}
+.father .son {
+  background-color: black;
+}
+.father .son .grand-son {
+  font-size: 20px;
+}
+
+.parent > .child {
+  font-size: 20px;
+}
+.parent .son {
+  color: red;
+}
+
+.parent2 > .ele1 {
+  font-size: 20px;
+}
+.parent2 > .ele2 {
+  color: black;
+}
+.parent2 + p {
+  background-color: green;
+}
+.parent2 + span {
+  background-color: red;
+}
+.parent2 .not-direct {
+  box-sizing: border-box;
+}
+
+.box .green {
+  color: green;
+}
+.box.red {
+  font-size: 20px;
+}
+.box:hover {
+  color: red;
+}
+.box::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}/*# sourceMappingURL=main.css.map */

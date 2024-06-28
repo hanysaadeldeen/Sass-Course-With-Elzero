@@ -15,3 +15,63 @@
 .under {
   color: $main-color;
 }
+
+.father {
+  color: red;
+  .son {
+    background-color: black;
+    .grand-son {
+      font-size: 20px;
+    }
+  }
+}
+
+.parent {
+  > .child {
+    font-size: 20px;
+  }
+  .son {
+    color: red;
+  }
+}
+.parent2 {
+  > {
+    .ele1 {
+      font-size: 20px;
+    }
+    .ele2 {
+      color: black;
+    }
+  }
+  + {
+    p {
+      background-color: green;
+    }
+    span {
+      background-color: red;
+    }
+  }
+  .not-direct {
+    box-sizing: border-box;
+  }
+}
+
+.box {
+  .green {
+    color: green;
+  }
+  &.red {
+    font-size: 20px;
+  }
+  &:hover {
+    color: red;
+  }
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+}
+
+// nesting  & parent element
