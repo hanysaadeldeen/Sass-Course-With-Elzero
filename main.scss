@@ -108,3 +108,24 @@
   color: green;
   font-weight: bold;
 }
+
+// control flow => if, else
+
+$theme: "light";
+
+.page {
+  @if $theme == light {
+    background-color: white;
+    color: #444;
+  } @else {
+    background-color: #444;
+    color: white;
+  }
+}
+
+$rounded: true;
+
+.rouded {
+  @extend .footer;
+  border-radius: if($rounded, 5px, null);
+}
