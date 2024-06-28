@@ -70,4 +70,31 @@
   width: 20px;
   height: 20px;
   position: absolute;
+}
+
+.box2 {
+  font-size: 2px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  border-right: transparent;
+  border-bottom: 8px solid black;
+}
+
+.hany {
+  margin-right: 20px;
+  background-color: red;
+  font-size: 80px;
+}
+
+.article, .hany {
+  color: yellow;
+  box-shadow: brown;
+}
+
+.hany {
+  color: green;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

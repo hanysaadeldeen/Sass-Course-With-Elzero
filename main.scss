@@ -25,6 +25,7 @@
     }
   }
 }
+// nesting  & parent element
 
 .parent {
   > .child {
@@ -74,4 +75,36 @@
   }
 }
 
-// nesting  & parent element
+// property declaration and place holder
+
+.box2 {
+  font : {
+    size: 2px;
+    weight: bold;
+  }
+  margin: auto {
+    top: 10px;
+    bottom: 20px;
+  }
+  border: 1px solid red {
+    right: transparent;
+    bottom: 8px solid black;
+  }
+}
+
+%ads {
+  margin-right: 20px;
+  background-color: red;
+  font-size: 80px;
+}
+
+.article {
+  color: yellow;
+  box-shadow: brown;
+}
+.hany {
+  @extend %ads;
+  @extend .article;
+  color: green;
+  font-weight: bold;
+}
