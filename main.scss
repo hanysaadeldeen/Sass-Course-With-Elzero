@@ -1,3 +1,17 @@
 @use "./sass/layout/global-rules";
 
 @use "./sass/pages/contact";
+
+@use "./sass/varailble/varailble" as *;
+.header {
+  background-color: $alt-color;
+}
+
+.footer {
+  $alt-color: yellow !global;
+  background-color: $alt-color;
+}
+
+.under {
+  color: $main-color;
+}
