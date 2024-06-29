@@ -3,6 +3,9 @@
 @use "./sass/pages/contact";
 
 @use "./sass/varailble/varailble" as *;
+
+@use "./sass/helper/mixin" as *;
+
 .header {
   background-color: $alt-color;
 }
@@ -94,7 +97,6 @@
 
 %ads {
   margin: 20px;
-
   background-color: rgb(255, 137, 137);
   padding: 20px;
 }
@@ -170,4 +172,36 @@ $position: "right";
   font-size: 25px;
   background-image: url("imgs/#{$company}.png");
   #{$position}: 0;
+}
+
+// this comment will not show in css file
+/* this comment will show in css file but isn't in the comperesd mode*/
+/* this comment will show in css file alson show in comperesd mode*/
+
+// mixin and include
+
+@mixin reset-body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.ul.links {
+  @include reset-body;
+}
+
+.day {
+  @include circle(25px);
+  background-color: red;
+  font-size: 25px;
+}
+
+.day2 {
+  @include circle(10px);
+  background-color: yellow;
+  font-size: 90px;
+}
+
+.center-mixin {
+  @include circle(50px);
+  @include center;
 }

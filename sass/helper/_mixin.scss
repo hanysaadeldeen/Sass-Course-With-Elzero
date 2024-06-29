@@ -1,0 +1,17 @@
+@mixin reset-body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin circle($dinemtion) {
+  border-radius: 50%;
+  width: $dinemtion;
+  height: $dinemtion;
+}
+
+@mixin center {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
