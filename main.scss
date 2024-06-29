@@ -15,3 +15,96 @@
 .under {
   color: $main-color;
 }
+
+.father {
+  color: red;
+  .son {
+    background-color: black;
+    .grand-son {
+      font-size: 20px;
+    }
+  }
+}
+// nesting  & parent element
+
+.parent {
+  > .child {
+    font-size: 20px;
+  }
+  .son {
+    color: red;
+  }
+}
+.parent2 {
+  > {
+    .ele1 {
+      font-size: 20px;
+    }
+    .ele2 {
+      color: black;
+    }
+  }
+  + {
+    p {
+      background-color: green;
+    }
+    span {
+      background-color: red;
+    }
+  }
+  .not-direct {
+    box-sizing: border-box;
+  }
+}
+
+.box {
+  .green {
+    color: green;
+  }
+  &.red {
+    font-size: 20px;
+  }
+  &:hover {
+    color: red;
+  }
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+}
+
+// property declaration and place holder
+
+.box2 {
+  font : {
+    size: 2px;
+    weight: bold;
+  }
+  margin: auto {
+    top: 10px;
+    bottom: 20px;
+  }
+  border: 1px solid red {
+    right: transparent;
+    bottom: 8px solid black;
+  }
+}
+
+%ads {
+  margin-right: 20px;
+  background-color: red;
+  font-size: 80px;
+}
+
+.article {
+  color: yellow;
+  box-shadow: brown;
+}
+.hany {
+  @extend %ads;
+  @extend .article;
+  color: green;
+  font-weight: bold;
+}
