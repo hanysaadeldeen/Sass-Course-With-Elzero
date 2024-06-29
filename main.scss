@@ -224,3 +224,44 @@ $dimentions: 1;
   }
   $dimentions: $dimentions + 1;
 }
+
+// each + map
+// use each
+$themes: red, blue, yellow;
+
+@each $theme in $themes {
+  .#{$theme}-theme {
+    .product {
+      background-color: black;
+      border-bottom: $theme;
+    }
+    .item {
+      color: $theme;
+      font-weight: bold;
+    }
+  }
+}
+/*use each in object*/
+
+$social: (
+  "facebook": blue,
+  "twitter": red,
+  "instagram": yellow,
+);
+
+@each $name, $color in $social {
+  .#{$name} {
+    .product {
+      color: $color;
+      font-size: bold;
+      &::before {
+        content: "#{$name}";
+        font-size: 20px;
+        color: $color;
+      }
+    }
+    &::after {
+      content: $name;
+    }
+  }
+}
