@@ -93,9 +93,10 @@
 }
 
 %ads {
-  margin-right: 20px;
-  background-color: red;
-  font-size: 80px;
+  margin: 20px;
+
+  background-color: rgb(255, 137, 137);
+  padding: 20px;
 }
 
 .article {
@@ -128,4 +129,36 @@ $rounded: true;
 .rouded {
   @extend .footer;
   border-radius: if($rounded, 5px, null);
+}
+
+$direction: "top";
+
+.arrow-div {
+  @extend %ads;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 60px auto;
+  &::after {
+    content: "";
+    position: absolute;
+    @if ($direction== "top") {
+      top: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent {
+        bottom-color: red;
+      }
+    } @else {
+      bottom: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent {
+        top-color: red;
+      }
+    }
+  }
 }
