@@ -162,3 +162,12 @@ $direction: "top";
     }
   }
 }
+
+// interpolation
+$company: "elzero-web";
+$position: "right";
+.ad-#{$company} {
+  font-size: 25px;
+  background-image: url("imgs/#{$company}.png");
+  #{$position}: 0;
+}
