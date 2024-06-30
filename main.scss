@@ -246,7 +246,6 @@ $themes: red, blue, yellow;
 $social: (
   "facebook": blue,
   "twitter": red,
-  "instagram": yellow,
 );
 
 @each $name, $color in $social {
@@ -264,4 +263,14 @@ $social: (
       content: $name;
     }
   }
+}
+
+// for loop =>  while
+
+$start: 1;
+@while $start <10 {
+  .full-w-#{$start} {
+    width: $start * 100;
+  }
+  $start: $start + 1;
 }
