@@ -52,7 +52,7 @@
       background-color: green;
     }
     span {
-      background-color: red;
+      background-color: yellow;
     }
   }
   .not-direct {
@@ -204,4 +204,23 @@ $position: "right";
 .center-mixin {
   @include circle(50px);
   @include center;
+}
+
+// for loop
+
+@for $i from 1 Through 10 {
+  .class-#{$i} {
+    font-size: #{$i + 2 + 5px};
+  }
+}
+/* for padding and marginwith loop */
+
+$dimentions: 1;
+
+@for $i from 1 to 10 {
+  .padd-mar-#{$i + $dimentions} {
+    padding: #{$i + $dimentions};
+    margin: #{$i + $dimentions};
+  }
+  $dimentions: $dimentions + 1;
 }
