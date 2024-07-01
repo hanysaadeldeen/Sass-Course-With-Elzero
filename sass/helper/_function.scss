@@ -1,0 +1,11 @@
+@function size($size) {
+  @return $size / 2;
+}
+
+@function calculate($height...) {
+  $total: 0;
+  @each $hight in $height {
+    $total: $total + $hight;
+  }
+  @return $total;
+}

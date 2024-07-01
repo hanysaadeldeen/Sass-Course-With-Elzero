@@ -6,6 +6,8 @@
 
 @use "./sass/helper/mixin" as *;
 
+@use "./sass/helper/function" as *;
+
 .header {
   background-color: $alt-color;
 }
@@ -281,4 +283,12 @@ $grid: 12;
   .col-#{$i} {
     width: percentage($i / $grid);
   }
+}
+
+// function
+
+.element1 {
+  height: 100px;
+  width: size(450px);
+  top: calculate(100px + 800px);
 }
