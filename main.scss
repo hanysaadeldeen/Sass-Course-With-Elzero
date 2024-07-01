@@ -274,3 +274,11 @@ $start: 1;
   }
   $start: $start + 1;
 }
+
+// grid
+$grid: 12;
+@for $i from 1 through $grid {
+  .col-#{$i} {
+    width: percentage($i / $grid);
+  }
+}

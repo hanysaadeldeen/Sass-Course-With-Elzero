@@ -1,0 +1,391 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: red;
+}
+
+.contant {
+  margin: 20px;
+  background-color: var(--main-color);
+}
+
+.header {
+  background-color: green;
+}
+
+.footer, .rouded {
+  background-color: yellow;
+}
+
+.under {
+  color: red;
+}
+
+.father {
+  color: red;
+}
+.father .son {
+  background-color: black;
+}
+.father .son .grand-son {
+  font-size: 20px;
+}
+
+.parent > .child {
+  font-size: 20px;
+}
+.parent .son {
+  color: red;
+}
+
+.parent2 > .ele1 {
+  font-size: 20px;
+}
+.parent2 > .ele2 {
+  color: black;
+}
+.parent2 + p {
+  background-color: green;
+}
+.parent2 + span {
+  background-color: yellow;
+}
+.parent2 .not-direct {
+  box-sizing: border-box;
+}
+
+.box .green {
+  color: green;
+}
+.box.red {
+  font-size: 20px;
+}
+.box:hover {
+  color: red;
+}
+.box::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.box2 {
+  font-size: 2px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  border-right: transparent;
+  border-bottom: 8px solid black;
+}
+
+.arrow-div, .hany {
+  margin: 20px;
+  background-color: rgb(255, 137, 137);
+  padding: 20px;
+}
+
+.article, .hany {
+  color: yellow;
+  box-shadow: brown;
+}
+
+.hany {
+  color: green;
+  font-weight: bold;
+}
+
+.page {
+  background-color: white;
+  color: #444;
+}
+
+.rouded {
+  border-radius: 5px;
+}
+
+.arrow-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 60px auto;
+}
+.arrow-div::after {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-bottom-color: red;
+}
+
+.ad-elzero-web {
+  font-size: 25px;
+  background-image: url("imgs/elzero-web.png");
+  right: 0;
+}
+
+/* this comment will show in css file but isn't in the comperesd mode*/
+/* this comment will show in css file alson show in comperesd mode*/
+.ul.links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.day {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  font-size: 25px;
+}
+
+.day2 {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  font-size: 90px;
+}
+
+.center-mixin {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+
+.class-1 {
+  font-size: 8px;
+}
+
+.class-2 {
+  font-size: 9px;
+}
+
+.class-3 {
+  font-size: 10px;
+}
+
+.class-4 {
+  font-size: 11px;
+}
+
+.class-5 {
+  font-size: 12px;
+}
+
+.class-6 {
+  font-size: 13px;
+}
+
+.class-7 {
+  font-size: 14px;
+}
+
+.class-8 {
+  font-size: 15px;
+}
+
+.class-9 {
+  font-size: 16px;
+}
+
+.class-10 {
+  font-size: 17px;
+}
+
+/* for padding and marginwith loop */
+.padd-mar-2 {
+  padding: 2;
+  margin: 2;
+}
+
+.padd-mar-4 {
+  padding: 4;
+  margin: 4;
+}
+
+.padd-mar-6 {
+  padding: 6;
+  margin: 6;
+}
+
+.padd-mar-8 {
+  padding: 8;
+  margin: 8;
+}
+
+.padd-mar-10 {
+  padding: 10;
+  margin: 10;
+}
+
+.padd-mar-12 {
+  padding: 12;
+  margin: 12;
+}
+
+.padd-mar-14 {
+  padding: 14;
+  margin: 14;
+}
+
+.padd-mar-16 {
+  padding: 16;
+  margin: 16;
+}
+
+.padd-mar-18 {
+  padding: 18;
+  margin: 18;
+}
+
+.red-theme .product {
+  background-color: black;
+  border-bottom: red;
+}
+.red-theme .item {
+  color: red;
+  font-weight: bold;
+}
+
+.blue-theme .product {
+  background-color: black;
+  border-bottom: blue;
+}
+.blue-theme .item {
+  color: blue;
+  font-weight: bold;
+}
+
+.yellow-theme .product {
+  background-color: black;
+  border-bottom: yellow;
+}
+.yellow-theme .item {
+  color: yellow;
+  font-weight: bold;
+}
+
+/*use each in object*/
+.facebook .product {
+  color: blue;
+  font-size: bold;
+}
+.facebook .product::before {
+  content: "facebook";
+  font-size: 20px;
+  color: blue;
+}
+.facebook::after {
+  content: "facebook";
+}
+
+.twitter .product {
+  color: red;
+  font-size: bold;
+}
+.twitter .product::before {
+  content: "twitter";
+  font-size: 20px;
+  color: red;
+}
+.twitter::after {
+  content: "twitter";
+}
+
+.full-w-1 {
+  width: 100;
+}
+
+.full-w-2 {
+  width: 200;
+}
+
+.full-w-3 {
+  width: 300;
+}
+
+.full-w-4 {
+  width: 400;
+}
+
+.full-w-5 {
+  width: 500;
+}
+
+.full-w-6 {
+  width: 600;
+}
+
+.full-w-7 {
+  width: 700;
+}
+
+.full-w-8 {
+  width: 800;
+}
+
+.full-w-9 {
+  width: 900;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
