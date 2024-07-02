@@ -299,16 +299,6 @@ $grid: 12;
   @include overLoad(black, 0.05);
 }
 
-@mixin fedx($key-min) {
-  @-webkit-keyframes #{$key-min} {
-    @content;
-  }
-
-  @keyframes #{$key-min} {
-    @content;
-  }
-}
-
 @include fedx(hello1) {
   from {
     opacity: 0;
@@ -325,6 +315,14 @@ $grid: 12;
     bottom: 100px;
   }
 }
-// .test {
-//   @include fedx(hello1);
-// }
+
+// if condition + mixin + content
+
+.testMedia {
+  @include breackPoint("mobile") {
+    font-size: 12px;
+  }
+  @include breackPoint("tablet") {
+    font-size: 20px;
+  }
+}

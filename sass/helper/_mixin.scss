@@ -24,3 +24,25 @@
   height: 100%;
   background-color: rgba($color, $opacity);
 }
+
+@mixin fedx($key-min) {
+  @-webkit-keyframes #{$key-min} {
+    @content;
+  }
+
+  @keyframes #{$key-min} {
+    @content;
+  }
+}
+
+@mixin breackPoint($size) {
+  @if $size== "mobile" {
+    @media (max-width: 786) {
+      @content;
+    }
+  } @else if $size == "tablet" {
+    @media (min-width: 786) and (max-width: 991) {
+      @content;
+    }
+  }
+}
