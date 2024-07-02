@@ -15,3 +15,12 @@
   align-items: start;
   justify-content: end;
 }
+
+@mixin overLoad($color, $opacity) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
